@@ -49,7 +49,7 @@ describe("Compound ETH Supply and Redeem", function () {
     currentSnapShot = await snapShot(compoundSupplyTest);
 
     console.log("\n", "---Supply---");
-    console.log(`Exchange Rate: ${currentSnapShot.exchangeRate / (10 ** (18 + decimals - cEthDecimals))}`);
+    console.log(`Exchange Rate: ${currentSnapShot.exchangeRate / (10 ** 18)}`);
     console.log(`Supply Rate (in Wei): ${currentSnapShot.supplyRate}`);
     console.log(`Balance of Underlying: ${currentSnapShot.balanceOfUnderlying / 10 ** decimals}`);
     console.log(`Contract CEth Balance: ${currentSnapShot.cEthBalance / 10 ** cEthDecimals}`);
@@ -72,7 +72,7 @@ describe("Compound ETH Supply and Redeem", function () {
     currentSnapShot = await snapShot(compoundSupplyTest);
 
     console.log("\n", "---Redeem---");
-    console.log(`Exchange Rate: ${currentSnapShot.exchangeRate / (10 ** (18 + decimals - cEthDecimals))}`);
+    console.log(`Exchange Rate: ${currentSnapShot.exchangeRate / (10 ** 18)}`);
     console.log(`Balance of Underlying: ${currentSnapShot.balanceOfUnderlying / 10 ** decimals}`);
     console.log(`Contract CEth Balance: ${currentSnapShot.cEthBalance / 10 ** cEthDecimals}`);
     console.log(`Contract ETH Balance: ${currentSnapShot.contractEthBalance / 10 ** decimals}`);
